@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056) -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="media/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="media/logo.png" type="image/x-icon">
+
+    <title>Shop Mi</title>
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <!-- Estilos propios -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Estilos de fuentes -->
+    <link rel="stylesheet" type="text/css" href="css/fuentes.css">
+    <!-- colores y diseño -->
+    <link rel="stylesheet" type="text/css" id="color" href="css/color.css">
+    <!-- ANIMACIONES -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/sweetalert2.min.css">  
+    
+    
+</head>
+<body class="body">
+
+<!-- Inicio del header -->
+<header class="header-2">
+    <div class="container">
+        <div class="row header-content">
+            <div class="col-12">
+                <div class="content-header">
+                    <div class="left-section">
+                        <div class="header-top">
+                            <div class="brand-logo">
+                                <a href="index.html"> <img src="media/logo2.png" width="150" class="" alt=""></a>
+                            </div>
+                            <nav id="main-nav">
+                                <div class="toggle-nav">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                                    </svg>
+                                </div>
+                                <ul id="main-menu" class="sm  pixelstrap sm-horizontal" >
+                                    <li>
+                                        <div class="mobile-back text-end">
+                                            Back<i class="fa fa-angle-right ps-2" aria-hidden="true"></i>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="index.html" >INICIO</a>
+                                    </li>
+                                    <li>
+                                        <a href="nosotros.html" >NOSOTROS</a>
+                                    </li>    
+                                    <li>
+                                        <a href="iniciar_sesion" >REGISTRARSE</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" >UBICANOS</a> 
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="header-bottom">
+                            <div class="search-bar">
+                                <input class="search__input" type="text" placeholder="Search a product">
+                                <div class="search-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                  </svg></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-section">
+                        <!-- Inicio de Sesion de usuario -->
+                        <div class="upper-section">
+                            <ul>
+                                <h6 class="usuario_is">Bienvenido: Elmer Urquia Chuecha</h6>
+                            </ul>
+                        </div>
+                        <!-- Finaliza sesion el usuario -->
+                        <div class="lower-section">
+                            <div class="nav-icon">
+                                <ul>
+                                    <li class="onhover-div pe-0 search-3">
+                                        <div onclick="openSearch()">
+                                            <i class="ti-search mobile-icon-search mobile-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                                </svg>
+                                            </i>
+                                        </div>
+                                        <div id="search-overlay" class="search-overlay">
+                                            <div>
+                                                <span class="closebtn" onclick="closeSearch()" title="Close Overlay"></span>
+                                                <div class="overlay-content">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-xl-12">
+                                                                <form>
+                                                                    <div class="form-group">
+                                                                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Search a Product">
+                                                                    </div>
+                                                                    <button type="submit" class="btn btn-primary">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                                                          </svg>
+                                                                    </button>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="onhover-div wishlist-icon" onclick="openWishlist()">
+                                        <img src="media/fav.png" alt="" class="wishlist-img">
+                                        <i class="ti-heart mobile-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                                              </svg>
+                                        </i>
+                                        <div class="wishlist icon-detail">
+                                            <h6 class="up-cls"><span>3 item</span></h6>
+                                            <h6><a href="#">wish list</a></h6>
+                                        </div>
+                                    </li>
+                                    <li class="onhover-div user-icon" onclick="openAccount()">
+                                        <img src="media/user.png" alt="" class="user-img">
+                                        <i class="ti-user mobile-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-check" viewBox="0 0 16 16">
+                                                <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514ZM11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
+                                                <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z"/>
+                                            </svg>
+                                        </i>
+                                        <div class="wishlist icon-detail">
+                                            <h6 class="up-cls"><span>my account</span></h6>
+                                            <h6><a href="#">login/sign up</a></h6>
+                                        </div>
+                                    </li>
+                                    <li class="onhover-div cart-icon" onclick="openCart()">
+                                        <img src="media/cart.png" alt="" class="cart-image">
+                                        <i class="ti-shopping-cart mobile-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                            </svg>
+                                        </i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- fin del header -->
+
+
+<!-- breadcrumb start -->
+<section class="breadcrumb-section section-b-space">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title">
+                    <h2>Registrarse</h2>
+                </div>
+            </div>
+            <div class="col-12">
+                <nav aria-label="breadcrumb" class="theme-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Registro</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- breadcrumb End -->
+
+
+<!--section start-->
+<section class="register-page section-b-space">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="title pt-0">Crear Cuenta</h3>
+                <div class="theme-card">
+                    <form class="theme-form">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="review">Nombres</label>
+                                <input type="text" class="form-control" id="xname" placeholder="Elmer" required="">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="review">Apellidos</label>
+                                <input type="text" class="form-control" id="xlname" pattern="[0-9]{8}" placeholder="Urquia Chuecha" required="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="review">DNI</label>
+                                <input type="tel" class="form-control" id="xdni" pattern="[0-9]{9}" placeholder="70584865" required="">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="review">Celular</label>
+                                <input type="text" class="form-control" id="lname" placeholder="942134738" required="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="label" for="email">Correo</label>
+                                <input type="email" class="form-control" placeholder="urquiachuechaelmer@gmail.com" required="">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="review">Contraseña</label>
+                                <input type="password" class="form-control" placeholder="Escribe tu contraseña" required="">
+                            </div><a type="submit" onclick="crearCuenta()" class="btn btn-solid w-auto">Crear Cuenta</a></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Section ends-->
+
+
+<!-- seccion footer -->
+<footer class="footer-2">
+    <div class="subscribe-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="subscribe-content">
+                        <h4>
+                            <i class="fa fa-envelope-o" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chat-text-fill" viewBox="0 0 16 16">
+                                <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM4.5 5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7zm0 2.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7zm0 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4z"/>
+                              </svg>
+                        </i>Boletin de Información</h4>
+                        <p>Dejanos tu correo para poder enviarte todas las ofertas del dia. </p>
+                        <form class="form-inline subscribe-form">
+                            <div class="form-group mb-0">
+                                <input type="text" class="form-control cdm" id="exampleFormControlInput2" placeholder="Escribe tu correo...">
+                            </div>
+                            <button type="submit" onclick="Suscribir()" class="btn btn-solid">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-section">
+        <div class="container">
+            <div class="row section-b-space section-t-space">
+                <div class="col-xl-4 col-lg-12 about-section">
+                    <div class="footer-title footer-mobile-title">
+                        <h4>sobre nosotros</h4>
+                    </div>
+                    <div class="footer-content">
+                        <div class="footer-loo">
+                            <img src="media/logo2.png" width="225" height="" alt="">
+                        </div>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution </p>
+                    </div>
+                    <div class="instagram">
+                        <div>
+                            <div class="instagram-banner">
+                                <h5>Siguenos<span>#GranMercadoXiaomi</span></h5>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col p-0">
+                                        <a href="#">
+                                            <div class="instagram-box">
+                                                <img src="media/h1.webp" alt="" class=" img-fluid">
+                                                <div class="overlay">
+                                                    <i class="fa fa-instagram" aria-hidden="true">
+                                                        <img src="media/ic1.png" height="25" width="25" alt="" class="imgpeq">
+                                                    </i>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col p-0">
+                                        <a href="#">
+                                            <div class="instagram-box">
+                                                <img src="media/h2.webp" alt="" class=" img-fluid">
+                                                <div class="overlay">
+                                                    <i class="fa fa-instagram" aria-hidden="true">
+                                                        <img src="media/ic2.png" height="25" width="25" alt="" class="imgpeq">
+                                                    </i>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col p-0">
+                                        <a href="#">
+                                            <div class="instagram-box">
+                                                <img src="media/h3.jpg" alt="" class=" img-fluid">
+                                                <div class="overlay">
+                                                    <i class="fa fa-instagram" aria-hidden="true">
+                                                        <img src="media/ic3.png" height="25" width="25" alt="" class="imgpeq">
+                                                    </i>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col p-0">
+                                        <a href="#">
+                                            <div class="instagram-box">
+                                                <img src="media/h4.webp" alt="" class=" img-fluid">
+                                                <div class="overlay">
+                                                    <i class="fa fa-instagram" aria-hidden="true">
+                                                        <img src="media/ic4.png" height="16" width="16" alt="" class="imgpeq">
+                                                    </i>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col p-0">
+                                        <a href="#">
+                                            <div class="instagram-box">
+                                                <img src="media/h5.webp" alt="" class=" img-fluid">
+                                                <div class="overlay">
+                                                    <i class="fa fa-instagram" aria-hidden="true">
+                                                        <img src="media/ic5.png" height="20" width="20" alt="" class="imgpeq">
+                                                    </i>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col p-0">
+                                        <a href="#">
+                                            <div class="instagram-box">
+                                                <img src="media/h6.jpg" alt="" class=" img-fluid">
+                                                <div class="overlay">
+                                                    <i class="fa fa-instagram" aria-hidden="true">
+                                                        <img src="media/ic6.png" height="25" width="25" alt="" class="imgpeq">
+                                                    </i>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col p-0">
+                                        <a href="#">
+                                            <div class="instagram-box">
+                                                <img src="media/h7.jpg" alt="" class=" img-fluid">
+                                                <div class="overlay">
+                                                    <i class="fa fa-instagram" aria-hidden="true">
+                                                        <img src="media/ic7.png" height="20" width="20" alt="" class="imgpeq">
+                                                    </i>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col p-0">
+                                        <a href="#">
+                                            <div class="instagram-box">
+                                                <img src="media/h8.png" alt="" class=" img-fluid">
+                                                <div class="overlay">
+                                                    <i class="fa fa-instagram" aria-hidden="true">
+                                                        <img src="media/ic8.png" height="20" width="20" alt="" class="imgpeq">
+                                                    </i>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col p-0">
+                                        <a href="#">
+                                            <div class="instagram-box">
+                                                <img src="media/h9.jpg" alt="" class=" img-fluid">
+                                                <div class="overlay">
+                                                    <i class="fa fa-instagram" aria-hidden="true">
+                                                        <img src="media/ic9.png" height="20" width="20" alt="" class="imgpeq">
+                                                    </i>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col p-0">
+                                        <a href="#">
+                                            <div class="instagram-box">
+                                                <img src="media/h10.jpg" alt="" class=" img-fluid">
+                                                <div class="overlay">
+                                                    <i class="fa fa-instagram" aria-hidden="true">
+                                                        <img src="media/ic10.png" height="20" width="20" alt="" class="imgpeq">
+                                                    </i>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-8 col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-4 footer-link">
+                            <div>
+                                <div class="footer-title">
+                                    <h4>Mi cuenta</h4>
+                                </div>
+                                <div class="footer-content">
+                                    <ul>
+                                        <li><a href="#">sobre nosotros</a></li>
+                                        <li><a href="#">Contáctenos</a></li>
+                                        <li><a href="#">Términos y condiciones</a></li>
+                                        <li><a href="#">devoluciones y cambios</a></li>
+                                        <li><a href="#">compras seguras</a></li>
+                                        <li><a href="#">Envío y Entrega</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 footer-link">
+                            <div>
+                                <div class="footer-title">
+                                    <h4>enlace rápido</h4>
+                                </div>
+                                <div class="footer-content">
+                                    <ul>
+                                        <li><a href="#">ubicación de la tienda</a></li>
+                                        <li><a href="#">mi cuentat</a></li>
+                                        <li><a href="#">rastreo de orden</a></li>
+                                        <li><a href="#">Guia de tallas</a></li>
+                                        <li><a href="#">mi carrito</a></li>
+                                        <li><a href="#">Preguntas más frecuentes</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 footer-link">
+                            <div>
+                                <div class="footer-title">
+                                    <h4>categoría</h4>
+                                </div>
+                                <div class="footer-content">
+                                    <ul>
+                                        <li><a href="#">Xiaomi Series</a></li>
+                                        <li><a href="#">Xiaomi Mi</a></li>
+                                        <li><a href="#">Xiaomi Retmi</a></li>
+                                        <li><a href="#">Xiaomi Note</a></li>
+                                        <li><a href="#">Xiaomi A</a></li>
+                                        <li><a href="#">Xiaomi POCO</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="callus b-left bg-size" style="background-image: url(&quot;../assets/images/call-us.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat; display: block;">
+                                <img src="media/f1.webp" alt="" class="bg-img bg-left" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="footer-bottom"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sub-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-md-6 col-sm-12">
+                    <div class="footer-end">
+                        <p>2022 - Todos los Derechos Reservados by Xiaomi Store</p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-6 col-sm-12">
+                    <div class="payment-card-bottom">
+                        <ul>
+                            <li>
+                                <a href="#"><img src="media/visa.png" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="media/mastercard.png" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="media/paypal.png" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="media/american-express.png" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="media/discover.png" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- footer section end -->
+
+<!-- Inicio de agregar al carrito -->
+<div id="cart_side" class="add_to_cart right">
+    <a href="javascript:void(0)" class="overlay" onclick="closeCart()"></a>
+    <div class="cart-inner">
+        <div class="cart_top">
+            <h3>Mi carrito</h3>
+            <div class="close-cart">
+                <a href="javascript:void(0)" onclick="closeCart()">
+                    <i class="fa fa-times" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+                            <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                          </svg>
+                    </i>
+                </a>
+            </div>
+        </div>
+        <div class="cart_media">
+            <ul class="cart_product">
+                <div id="carrit" class="" aria-labelledby="navbarCollapse">
+                    <div class="d-flex flex-row mb-3">
+                        <div class="imagenm">
+                            Imagen
+                        </div>
+                        <div class="modelom ">
+                            Modelo
+                        </div>
+                        <div class="p-2">
+                            Precio (S/.)
+                        </div>
+                        <div class="p-2">
+                        </div>
+                    </div>
+                    <div id="carrito-contenedor">
+                    </div>                        
+                    <p class="precioProducto">Precio total: S/ <span id="precioTotal">0</span></p>
+                
+                    <a id="vaciar-carrito" class="btn btn-primary boton-agregar" href="#" role="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                    </svg>  Vaciar Carrito</a>
+
+                    <a id="btn7" class="btn btn-secondary " href="#" role="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                          </svg>
+                        Pagar</a>
+                </div>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Fin de agregrer productos a carritos-->
+
+<!-- Inicio a gregar a mi lista de favoritos -->
+<div id="wishlist_side" class="add_to_cart right">
+    <a href="javascript:void(0)" class="overlay" onclick="closeWishlist()"></a>
+    <div class="cart-inner">
+        <div class="cart_top">
+            <h3>mi lista de deseos</h3>
+            <div class="close-cart">
+                <a href="javascript:void(0)" onclick="closeWishlist()">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+        <div class="cart_media">
+            <ul class="cart_product ">
+                <li>
+                    <div id="favorito-contenedor">
+
+                    </div> 
+                </li>
+                <a id="vaciar-favorito" class="btn btn-primary boton-agregar" href="#" role="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                </svg>  Vaciar Mi Lista</a>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Fin de gregar a mi lista de favoritos -->
+
+<!-- Barra de Iniciar Sesion -->
+<div id="myAccount" class="add_to_cart right">
+    <a href="javascript:void(0)" class="overlay" onclick="closeAccount()"></a>
+    <div class="cart-inner">
+        <div class="cart_top">
+            <h3>mi cuenta</h3>
+            <div class="close-cart">
+                <a href="javascript:void(0)" onclick="closeAccount()">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+        <form class="theme-form">
+            <div class="form-group">
+                <label for="email">Correo</label>
+                <input type="text" class="form-control" id="email" placeholder="Email" required="">
+            </div>
+            <div class="form-group">
+                <label for="review">Contraseña</label>
+                <input type="password" class="form-control" id="review" placeholder="Escribe tu contraseña" required="">
+            </div>
+            <a href="#" class="btn btn-solid btn-solid-sm btn-block ">Ingresar</a>
+            <h5 class="forget-class"><a href="#" class="d-block">Olvidaste tu contraseña?</a></h5>
+            <h5 class="forget-class"><a href="registrarse.html" class="d-block">Nuevo en la tienda? Regístrate ahora</a></h5>
+        </form>
+    </div>
+</div>
+<!-- Fin de barra de Iniciar Sesion -->
+
+<!-- Inicio de informacion del producto-->
+<div class="modal fade bd-example-modal-lg theme-modal" id="quick-view" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content quick-view-modal">
+            <div class="modal-body">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="row">
+                    <div class="col-lg-6 col-xs-12">
+                        <div class="quick-view-img"><img src="media/1.png" alt="" class="img-fluid "></div>
+                    </div>
+                    <div class="col-lg-6 rtl-text">
+                        <div class="product-right">
+                            <h2>Xiaomi Note 11</h2>
+                            <h3>S/ 1380.00</h3>
+                            <div class="border-product">
+                                <h6 class="product-title">product details:</h6>
+                                <p>this brand is a t-shirt led value brand for men, women and kids. Our range consists of basic and updated basic knit apparel. We offer both singles and packs with the right blend of quality, style and value aimed to delight our customers.</p>
+                            </div>
+                            <div class="product-description border-product">
+                                <h6 class="product-title">color:</h6>
+                                <ul class="color-variant">
+                                    <li class="light-purple active"></li>
+                                    <li class="theme-blue"></li>
+                                    <li class="theme-color"></li>
+                                </ul>
+                                <h6 class="product-title"></h6>
+                                <div class="size-box">
+                                    <ul class="size-box">
+                                        
+                                    </ul>
+                                </div>
+                                <h6 class="product-title"></h6>
+                                <div class="qty-box">
+                                    <div class="input-group"><span class="input-group-prepend"><button type="button" class="btn quantity-left-minus" data-type="minus" data-field=""><i class="ti-angle-left">-</i></button> </span>
+                                        <input type="text" name="quantity" class="form-control input-number" value="1"> <span class="input-group-prepend"><button type="button" class="btn quantity-right-plus" data-type="plus" data-field=""><i class="ti-angle-right">+</i></button></span></div>
+                                </div>
+                            </div>
+                            <div class="product-buttons">
+                                <a href="" class="btn btn-solid">add to cart</a>
+                                <a href="" class="btn btn-solid">view detail</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fin de informacion del producto-->
+
+<!-- latest jquery-->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/extras.js"></script>
+<script src="js/script.js"></script>
+<script src="js/carrito.js"></script>
+<script src="js/favorito.js"></script>
+<script src="js/stock.js"></script>
+<!-- Sweetalert -->
+<!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+<script src="js/sweetalert2.all.min.js"></script>
+<script src="js/alertas.js"></script>
+<!-- anmaciones -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+</body></html>
